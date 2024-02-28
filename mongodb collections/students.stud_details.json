@@ -1,0 +1,304 @@
+[{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5956"
+  },
+  "id": 1,
+  "name": "A_Nafih",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5957"
+  },
+  "id": 2,
+  "name": "Abhiram_C",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5958"
+  },
+  "id": 3,
+  "name": "Ajmila_Shada",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5959"
+  },
+  "id": 4,
+  "name": "Akshay_P",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac595a"
+  },
+  "id": 5,
+  "name": "Amal_G",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac595b"
+  },
+  "id": 6,
+  "name": "Ameeza",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac595c"
+  },
+  "id": 7,
+  "name": "Anagha_A_S",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac595d"
+  },
+  "id": 8,
+  "name": "Anusree",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac595e"
+  },
+  "id": 9,
+  "name": "Ardra",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac595f"
+  },
+  "id": 10,
+  "name": "Arjun_CM",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5960"
+  },
+  "id": 11,
+  "name": "Arjun_P_J",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5961"
+  },
+  "id": 12,
+  "name": "Arjun_V",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5962"
+  },
+  "id": 13,
+  "name": "Ashish",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5963"
+  },
+  "id": 14,
+  "name": "Ashni_Chinnu",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5964"
+  },
+  "id": 15,
+  "name": "Aslam",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5965"
+  },
+  "id": 16,
+  "name": "Aswanth",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5966"
+  },
+  "id": 17,
+  "name": "Aswathi_P_V",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5967"
+  },
+  "id": 18,
+  "name": "Athira",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5968"
+  },
+  "id": 19,
+  "name": "Athul_Benny",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5969"
+  },
+  "id": 20,
+  "name": "Devanarayan_S_R",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac596a"
+  },
+  "id": 21,
+  "name": "Devika_J",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac596b"
+  },
+  "id": 22,
+  "name": "Faizan_T_P",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac596c"
+  },
+  "id": 23,
+  "name": "Fathih_A_F",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac596d"
+  },
+  "id": 24,
+  "name": "Jyothish_P_S",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac596e"
+  },
+  "id": 23,
+  "name": "Krishnendu",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac596f"
+  },
+  "id": 26,
+  "name": "Muhammed_Asad",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5970"
+  },
+  "id": 27,
+  "name": "Neha_P",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5971"
+  },
+  "id": 29,
+  "name": "Nivya",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5972"
+  },
+  "id": 30,
+  "name": "Ramnath_S",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5973"
+  },
+  "id": 31,
+  "name": "Sayooj",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5974"
+  },
+  "id": 32,
+  "name": "Sreeraj_E_K",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5975"
+  },
+  "id": 33,
+  "name": "Thejas_M",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5976"
+  },
+  "id": 34,
+  "name": "Tona_Antony",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5977"
+  },
+  "id": 35,
+  "name": "Veekshita_C_H",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5978"
+  },
+  "id": 36,
+  "name": "Veenus",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac5979"
+  },
+  "id": 37,
+  "name": "Vyshna_S",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac597a"
+  },
+  "id": 38,
+  "name": "Vyshnav_K",
+  "class": "2k20"
+},
+{
+  "_id": {
+    "$oid": "65c4bca53d03d6e1f0ac597b"
+  },
+  "id": 39,
+  "name": "Yadhu_Krishna",
+  "class": "2k20"
+}]
