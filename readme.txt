@@ -11,21 +11,15 @@ pip install tensorflow
 pip install deepface==0.0.79
 pip install retina-face
 pip install mediapipe
+pip install pymongo
 npm install -g npm (shoud install node from its website before this)
 
 #to run the server
 python manage.py runserver
 
-NOTE:
-changes in mar_2 branch from previous branches:
-
-FRBAS\settings.py changed(line 82)
-
-api\models.py changed
-api\urls.py changed
-api\views.py changed
-
-db_connection.py changed
-
-database\models.py,database\urls.py,database\views.py changed..(just comment out the everything in these files)
-note: you can also choose to delete the backend\database folder completely
+mar_5:
+created new file api/utils.py and api/serializers.py
+FRBAS/settings.py changed (added variables required for sending email, modified the REST_FRAMEWORK variable also...check for other changes as well:) )
+api/views.py changed
+api/urls.py changed
+note:function remove_small_faces needs to be modified..

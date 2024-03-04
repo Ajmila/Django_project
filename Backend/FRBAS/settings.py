@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,6 +29,12 @@ ALLOWED_HOSTS = []
 CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1'] 
 CSRF_COOKIE_SECURE = False
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Gmail SMTP port
+EMAIL_USE_TLS = True  # TLS encryption is required by Gmail
+EMAIL_HOST_USER = 'wigardiumleviosa985@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'cqhr fhec tary lzts'  # App-specific password for Gmail
 
 # Application definition
 
@@ -40,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    #'rest_framework.authtoken',
     'api',
     'database'
 
@@ -56,6 +63,34 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'FRBAS.urls'
+
+# SIMPLE_JWT = {
+#     "ACCESS_TOKEN_LIFETIME": timedelta(days=7),
+# }
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.BrowsableAPIRenderer',
+        'rest_framework.renderers.JSONRenderer',
+        
+        # Add other renderer classes if needed
+    ],
+    #  'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES' : [
+    #     'rest_framework.authentication.SessionAuthentication',
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication'
+    # ],
+}
+
+
+
+FORM_RENDERER = 'django.forms.renderers.DjangoTemplates'
+MEDIA_URL = '/media/'
+
+
+
 
 TEMPLATES = [
     {
