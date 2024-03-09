@@ -50,7 +50,7 @@ class UserLoginViewSet(ViewSet):
     serializer_class = UserSerializer
 
     def create(self, request):
-        serializer = self.serializer_class(data=request.data)
+        serializer = self.serializer_class(data = request.data)
         if serializer.is_valid():
             username = serializer.validated_data['username']
             password = serializer.validated_data['password']
@@ -78,6 +78,9 @@ class VideoProcessingViewSet(ViewSet):
             video_file = serializer.validated_data['video']
             temp_dir = tempfile.TemporaryDirectory()
             temp_file_path = os.path.join(temp_dir.name, 'video.mov')
+
+            class_name = request.data.get('class_name')
+            period = request.data.get('period')
         
             try:
                 # Save the video file temporarily
@@ -132,7 +135,7 @@ class VideoProcessingViewSet(ViewSet):
                     detected_faces[:] = sharp_faces[:]
 
                 #recognize faces and find present students
-                present = recognize_faces(detected_faces)
+                present = recognize_faces(detected_faces,class_name)
                 if len(present):
                     print('recognized faces successfully')
                     print('present:',present)
@@ -142,13 +145,13 @@ class VideoProcessingViewSet(ViewSet):
                
 
                 # Extract student names only
-                absent_names = [student['name'] for student in absent_students]
+                absent_names = [student['Name'] for student in absent_students]
                 print('absent:',absent_names)
 
-                #generate csv file
+                # mark attendance in database and generate csv file 
                 date = datetime.now().strftime('%Y-%m-%d')
                 time = datetime.now().strftime('%H:%M:%S')
-                inserted_document = {"date": date, "time": time, "present": present, "absent": absent_names}
+                inserted_document = {"date": date, "time": time, "class":class_name, "period":period, "present": present, "absent": absent_names}
                 attendance_collection.insert_one(inserted_document)
                 csv_data = generate_csv(inserted_document)
                 print('csv file generated')
@@ -156,7 +159,7 @@ class VideoProcessingViewSet(ViewSet):
                 # send mail to absent students(note:do not run this function since database dont have full data)
                 send_mail_to_absent_students(absent_students) 
 
-                # mail csv file to teacher(note:write code to access the teacher's email..a test email is given)
+                # mail csv file to teacher
                 email = request.session.get('email')
                 send_csv_email(email,csv_data)
 
@@ -170,7 +173,37 @@ class VideoProcessingViewSet(ViewSet):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class SelectClassViewSet(ViewSet):
+    serializer_class = SelectClassSerializer
+    def create(self,request):
+        serializer = self.serializer_class(data = request.data)
+        if serializer.is_valid():
+            class_name = serializer.validated_data['class_name']
+            period = serializer.validated_data['period']
+            return Response({'message': 'Class selected successfully'}, status = status.HTTP_200_OK)
+        else:
+            
+            return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
 
-
-
+class ViewClassViewSet(ViewSet):
+    serializer_class = ViewClassSerializer
+    def list(self, request):
+        # Get the class_name from the request query parameters
+        class_name = request.query_params.get('class_name')
+      
+        # Fetch documents from MongoDB based on class_name
+        documents = student_collection.find({"Class": class_name})
+        
+        # Convert MongoDB documents to dictionaries
+        document_dicts = [doc for doc in documents]
+        
+        print("Retrieved documents:", document_dicts)  # Debugging
+        
+        # Serialize the fetched documents
+        serializer = self.serializer_class(document_dicts, many = True)
+        
+        print("Serialized data:", serializer.data)  # Debugging
+        
+        # Return the serialized data with a 200 OK response
+        return Response({"data": serializer.data}, status = status.HTTP_200_OK)
 

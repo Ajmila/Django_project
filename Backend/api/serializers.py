@@ -25,6 +25,19 @@ class PasswordChangeSerializer(serializers.Serializer):
 class VideoUploadSerializer(serializers.Serializer):
     video = serializers.FileField()
 
-# class ProcessDataSerializer(serializers.Serializer):
-#     class_name = serializers.CharField()
-#     branch_name = serializers.CharField()
+
+class SelectClassSerializer(serializers.Serializer):
+    class_name = serializers.CharField()
+    period = serializers.CharField()
+
+class ViewClassSerializer(serializers.Serializer):
+    _id = serializers.CharField()  # Assuming '_id' is a string field
+    KTU_ID = serializers.CharField()  # Assuming 'id' is an integer field
+    Roll_No = serializers.IntegerField()
+    Name = serializers.CharField()
+    Class = serializers.CharField()
+    Email = serializers.CharField()
+    def to_representation(self, instance):
+        ret = super().to_representation(instance)
+        ret['Email'] = str(instance['Email'])  # Convert email to string
+        return ret

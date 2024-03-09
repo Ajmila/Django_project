@@ -181,9 +181,9 @@ def remove_blurred_faces(detected_faces, threshold=40):
 
 # functions to recognize faces(note:need modification)
 
-def recognize_faces(detected_faces):
+def recognize_faces(detected_faces,class_name):
     # Specify the condition for fetching documents
-    condition = {"class": "2k20"}
+    condition = {"Class": class_name}
 
     # Retrieve the document from MongoDB based on the condition
     document = classes_collection.find_one(condition)
@@ -228,12 +228,12 @@ def recognize_faces(detected_faces):
         # Clean up: Delete the temporary folder and its contents
         shutil.rmtree(temp_folder)
     else:
-        print("No document found with class attribute '2k20' in MongoDB.")
+        print("No document found with class attribute ",class_name," in MongoDB.")
     return present
 
 def get_absent_students(present):
     # Query MongoDB for students not present
-    absent_students = list(student_collection.find({'name': {'$nin': present}}))
+    absent_students = list(student_collection.find({'Name': {'$nin': present}}))
     
     return absent_students
 
