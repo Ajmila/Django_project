@@ -187,7 +187,7 @@ def recognize_faces(detected_faces,class_name):
 
     # Retrieve the document from MongoDB based on the condition
     document = classes_collection.find_one(condition)
-
+    present = []
     if document:
         # Retrieve the binary data from the MongoDB document
         binary_data_from_mongo = document['pkl']
@@ -208,9 +208,9 @@ def recognize_faces(detected_faces,class_name):
 
         # Perform some processing with the loaded data-face recognition
         models = []
-        present = []
+        
         for i in range(len(detected_faces)):
-            model = df.find(img_path=detected_faces[i],db_path=temp_folder,model_name='Facenet',distance_metric='euclidean',enforce_detection=False,normalization='Facenet',detector_backend='mediapipe')
+            model = df.find(img_path = detected_faces[i],db_path = temp_folder,model_name = 'Facenet',distance_metric='euclidean',enforce_detection = False,normalization = 'Facenet',detector_backend ='mediapipe')
             models.append(model)
         print()
         #count = 0
@@ -238,8 +238,16 @@ def get_absent_students(present):
     return absent_students
 
 def generate_csv(document):
-    csv_data = [[ 'Date', 'Time', 'Present Students', 'Absent Students'],
-                [document['date'], document['time'], ','.join(document.get('present', [])), ','.join(document.get('absent', []))]]
+    csv_data = [[ 'Date', 'Time', 'Class','Period','Present Students', 'Absent Students'],
+                [document['date'], document['time'],document['class'],document['period'], '','']]
+    
+    for student in document.get('present', []):
+        csv_data.append(['', '', '', '', student, ''])
+
+    # Add absent students to CSV data
+    for student in document.get('absent', []):
+        csv_data.append(['', '', '', '','', student])
+
     # Convert CSV data to string
     csv_buffer = StringIO()
     csv_writer = csv.writer(csv_buffer)
@@ -261,7 +269,7 @@ def send_mail_to_absent_students(absent_students):
         # Send email to the absent student
         subject = 'Attendance Notification'
         message = f'Dear {name},\nYou were marked as absent in today\'s class. Please ensure your attendance in the upcoming classes.'
-        from_email = 'ajmilashada@gmail.com'  # Replace with your email address
+        from_email = 'wigardiumleviosa985@gmail.com'  # Replace with your email address
         recipient_list = [email]
 
         send_mail(subject, message, from_email, recipient_list)

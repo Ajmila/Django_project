@@ -23,12 +23,11 @@ class PasswordChangeSerializer(serializers.Serializer):
         return data
 
 class VideoUploadSerializer(serializers.Serializer):
+    class_name = serializers.CharField()
+    period = serializers.CharField()
     video = serializers.FileField()
 
 
-class SelectClassSerializer(serializers.Serializer):
-    class_name = serializers.CharField()
-    period = serializers.CharField()
 
 class ViewClassSerializer(serializers.Serializer):
     _id = serializers.CharField()  # Assuming '_id' is a string field

@@ -75,13 +75,14 @@ class VideoProcessingViewSet(ViewSet):
         serializer = VideoUploadSerializer(data = request.data)
         
         if serializer.is_valid():
+            class_name = serializer.validated_data['class_name']
+            period = serializer.validated_data['period']
             video_file = serializer.validated_data['video']
             temp_dir = tempfile.TemporaryDirectory()
             temp_file_path = os.path.join(temp_dir.name, 'video.mov')
 
-            class_name = request.data.get('class_name')
-            period = request.data.get('period')
-        
+            
+            print('class_name=',class_name)
             try:
                 # Save the video file temporarily
                 with open(temp_file_path, 'wb+') as destination:
@@ -157,7 +158,7 @@ class VideoProcessingViewSet(ViewSet):
                 print('csv file generated')
 
                 # send mail to absent students(note:do not run this function since database dont have full data)
-                send_mail_to_absent_students(absent_students) 
+                #send_mail_to_absent_students(absent_students) 
 
                 # mail csv file to teacher
                 email = request.session.get('email')
@@ -173,17 +174,7 @@ class VideoProcessingViewSet(ViewSet):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class SelectClassViewSet(ViewSet):
-    serializer_class = SelectClassSerializer
-    def create(self,request):
-        serializer = self.serializer_class(data = request.data)
-        if serializer.is_valid():
-            class_name = serializer.validated_data['class_name']
-            period = serializer.validated_data['period']
-            return Response({'message': 'Class selected successfully'}, status = status.HTTP_200_OK)
-        else:
-            
-            return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+
 
 class ViewClassViewSet(ViewSet):
     serializer_class = ViewClassSerializer
