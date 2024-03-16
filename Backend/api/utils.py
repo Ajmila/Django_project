@@ -166,15 +166,15 @@ def remove_blurred_faces(detected_faces, threshold=40):
     count=0
     for i, face in enumerate(detected_faces):
         sharpness = calculate_blurriness(face)
-        print("face",count," ",sharpness)#printing sharpness of each face
+        # print("face",count," ",sharpness)#printing sharpness of each face
         count+=1
         if sharpness > threshold:
             sharp_faces.append(face)
-    output_folder = 'C:\\Users\\wigar\\Desktop\\Django_project\\sharpfaces'
+    # output_folder = 'C:\\Users\\wigar\\Desktop\\Django_project\\sharpfaces'
     
-    for i, face in enumerate(sharp_faces):
-        face = cv2.cvtColor(face,cv2.COLOR_BGR2RGB)
-        cv2.imwrite(os.path.join(output_folder, f'face_{i}.jpg'), face)        
+    # for i, face in enumerate(sharp_faces):
+    #     face = cv2.cvtColor(face,cv2.COLOR_BGR2RGB)
+    #     cv2.imwrite(os.path.join(output_folder, f'face_{i}.jpg'), face)        
     return sharp_faces
 
 #.............................................................................................................
@@ -216,7 +216,7 @@ def recognize_faces(detected_faces,class_name):
         #count = 0
         for model in models:
             if len(model) > 0 and len(model[0]) > 0:
-                name = model[0]['identity'].values[0].split('\\')[-1].split('/')[-1].split('.')[-2]
+                name = model[0]['identity'].values[0]#.split('\\')[-1].split('/')[-1].split('.')[-2]
                 #print(count , "_ ", name)
                 if name not in present:
                     present.append(name)

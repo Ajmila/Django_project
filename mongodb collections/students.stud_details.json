@@ -1,304 +1,720 @@
 [{
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5956"
+    "$oid": "65f58e88f7ea0514390c4bad"
   },
-  "id": 1,
-  "name": "A_Nafih",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS001",
+  "Roll_No": 1,
+  "Name": "Abdu_Nafi_V_P",
+  "Class": "cse_2k20",
+  "Email": "20b052@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5957"
+    "$oid": "65f58e88f7ea0514390c4bae"
   },
-  "id": 2,
-  "name": "Abhiram_C",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS002",
+  "Roll_No": 2,
+  "Name": "Abhiram_C",
+  "Class": "cse_2k20",
+  "Email": "20b060@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5958"
+    "$oid": "65f58e88f7ea0514390c4baf"
   },
-  "id": 3,
-  "name": "Ajmila_Shada",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS003",
+  "Roll_No": 3,
+  "Name": "Adithya_C_Ashok",
+  "Class": "cse_2k20",
+  "Email": "20b117@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5959"
+    "$oid": "65f58e88f7ea0514390c4bb0"
   },
-  "id": 4,
-  "name": "Akshay_P",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS004",
+  "Roll_No": 4,
+  "Name": "Ajmila_Shada",
+  "Class": "cse_2k20",
+  "Email": "20b394@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac595a"
+    "$oid": "65f58e88f7ea0514390c4bb1"
   },
-  "id": 5,
-  "name": "Amal_G",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS005",
+  "Roll_No": 5,
+  "Name": "Akshara_K_V",
+  "Class": "cse_2k20",
+  "Email": "20b395@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac595b"
+    "$oid": "65f58e88f7ea0514390c4bb2"
   },
-  "id": 6,
-  "name": "Ameeza",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS007",
+  "Roll_No": 7,
+  "Name": "Amal_E_J",
+  "Class": "cse_2k20",
+  "Email": "20b713@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac595c"
+    "$oid": "65f58e88f7ea0514390c4bb3"
   },
-  "id": 7,
-  "name": "Anagha_A_S",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS008",
+  "Roll_No": 8,
+  "Name": "Amal_Ganesh",
+  "Class": "cse_2k20",
+  "Email": "20b216@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac595d"
+    "$oid": "65f58e88f7ea0514390c4bb4"
   },
-  "id": 8,
-  "name": "Anusree",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS009",
+  "Roll_No": 9,
+  "Name": "Amal_Joy_Rodrigs",
+  "Class": "cse_2k20",
+  "Email": "20b166@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac595e"
+    "$oid": "65f58e88f7ea0514390c4bb5"
   },
-  "id": 9,
-  "name": "Ardra",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS010",
+  "Roll_No": 10,
+  "Name": "Ameeza_K_U",
+  "Class": "cse_2k20",
+  "Email": "20b433@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac595f"
+    "$oid": "65f58e88f7ea0514390c4bb6"
   },
-  "id": 10,
-  "name": "Arjun_CM",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS011",
+  "Roll_No": 11,
+  "Name": "Amrutha_Babu_T",
+  "Class": "cse_2k20",
+  "Email": "20b722@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5960"
+    "$oid": "65f58e88f7ea0514390c4bb7"
   },
-  "id": 11,
-  "name": "Arjun_P_J",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS012",
+  "Roll_No": 12,
+  "Name": "Anagha_K_Sasidharan",
+  "Class": "cse_2k20",
+  "Email": "20b247@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5961"
+    "$oid": "65f58e88f7ea0514390c4bb8"
   },
-  "id": 12,
-  "name": "Arjun_V",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS013",
+  "Roll_No": 13,
+  "Name": "Anjal_Mohammed_V",
+  "Class": "cse_2k20",
+  "Email": "20b705@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5962"
+    "$oid": "65f58e88f7ea0514390c4bb9"
   },
-  "id": 13,
-  "name": "Ashish",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS014",
+  "Roll_No": 14,
+  "Name": "Ankitha_N_Aravind",
+  "Class": "cse_2k20",
+  "Email": "20b253@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5963"
+    "$oid": "65f58e88f7ea0514390c4bba"
   },
-  "id": 14,
-  "name": "Ashni_Chinnu",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS015",
+  "Roll_No": 15,
+  "Name": "Anulakshmi_P_B",
+  "Class": "cse_2k20",
+  "Email": "20b397@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5964"
+    "$oid": "65f58e88f7ea0514390c4bbb"
   },
-  "id": 15,
-  "name": "Aslam",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS016",
+  "Roll_No": 16,
+  "Name": "Anusree_K",
+  "Class": "cse_2k20",
+  "Email": "20b372@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5965"
+    "$oid": "65f58e88f7ea0514390c4bbc"
   },
-  "id": 16,
-  "name": "Aswanth",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS017",
+  "Roll_No": 17,
+  "Name": "Ardra_Sreenivasan",
+  "Class": "cse_2k20",
+  "Email": "20b333@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5966"
+    "$oid": "65f58e88f7ea0514390c4bbd"
   },
-  "id": 17,
-  "name": "Aswathi_P_V",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS018",
+  "Roll_No": 18,
+  "Name": "Arjun_C_M",
+  "Class": "cse_2k20",
+  "Email": "20b336@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5967"
+    "$oid": "65f58e88f7ea0514390c4bbe"
   },
-  "id": 18,
-  "name": "Athira",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS019",
+  "Roll_No": 19,
+  "Name": "Arjun_P_Jayakrishnan",
+  "Class": "cse_2k20",
+  "Email": "20b315@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5968"
+    "$oid": "65f58e88f7ea0514390c4bbf"
   },
-  "id": 19,
-  "name": "Athul_Benny",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS020",
+  "Roll_No": 20,
+  "Name": "Arjun_Vinod",
+  "Class": "cse_2k20",
+  "Email": "20b045@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5969"
+    "$oid": "65f58e88f7ea0514390c4bc0"
   },
-  "id": 20,
-  "name": "Devanarayan_S_R",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS021",
+  "Roll_No": 21,
+  "Name": "Ashni_Chinnu_Sam",
+  "Class": "cse_2k20",
+  "Email": "20b291@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac596a"
+    "$oid": "65f58e88f7ea0514390c4bc1"
   },
-  "id": 21,
-  "name": "Devika_J",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS022",
+  "Roll_No": 22,
+  "Name": "Aswanth_K",
+  "Class": "cse_2k20",
+  "Email": "20b723@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac596b"
+    "$oid": "65f58e88f7ea0514390c4bc2"
   },
-  "id": 22,
-  "name": "Faizan_T_P",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS023",
+  "Roll_No": 23,
+  "Name": "Bhavana_K_V",
+  "Class": "cse_2k20",
+  "Email": "20b742@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac596c"
+    "$oid": "65f58e88f7ea0514390c4bc3"
   },
-  "id": 23,
-  "name": "Fathih_A_F",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS024",
+  "Roll_No": 24,
+  "Name": "Carolene_Joy",
+  "Class": "cse_2k20",
+  "Email": "20b399@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac596d"
+    "$oid": "65f58e88f7ea0514390c4bc4"
   },
-  "id": 24,
-  "name": "Jyothish_P_S",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS025",
+  "Roll_No": 25,
+  "Name": "Devanarayan_S_R",
+  "Class": "cse_2k20",
+  "Email": "20b604@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac596e"
+    "$oid": "65f58e88f7ea0514390c4bc5"
   },
-  "id": 23,
-  "name": "Krishnendu",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS026",
+  "Roll_No": 26,
+  "Name": "Faizan_T_P",
+  "Class": "cse_2k20",
+  "Email": "20b337@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac596f"
+    "$oid": "65f58e88f7ea0514390c4bc6"
   },
-  "id": 26,
-  "name": "Muhammed_Asad",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS027",
+  "Roll_No": 27,
+  "Name": "Fatih_Abdul_Fattah",
+  "Class": "cse_2k20",
+  "Email": "20b292@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5970"
+    "$oid": "65f58e88f7ea0514390c4bc7"
   },
-  "id": 27,
-  "name": "Neha_P",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS028",
+  "Roll_No": 28,
+  "Name": "Fida_Nourin_N_B",
+  "Class": "cse_2k20",
+  "Email": "20b153@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5971"
+    "$oid": "65f58e88f7ea0514390c4bc8"
   },
-  "id": 29,
-  "name": "Nivya",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS029",
+  "Roll_No": 29,
+  "Name": "Jeffrey_Shijo",
+  "Class": "cse_2k20",
+  "Email": "20b691@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5972"
+    "$oid": "65f58e88f7ea0514390c4bc9"
   },
-  "id": 30,
-  "name": "Ramnath_S",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS031",
+  "Roll_No": 31,
+  "Name": "Jishnu_J_S",
+  "Class": "cse_2k20",
+  "Email": "20b236@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5973"
+    "$oid": "65f58e88f7ea0514390c4bca"
   },
-  "id": 31,
-  "name": "Sayooj",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS032",
+  "Roll_No": 32,
+  "Name": "Jishnu_T_V",
+  "Class": "cse_2k20",
+  "Email": "20b082@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5974"
+    "$oid": "65f58e88f7ea0514390c4bcb"
   },
-  "id": 32,
-  "name": "Sreeraj_E_K",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS033",
+  "Roll_No": 33,
+  "Name": "Jyothish_P_S",
+  "Class": "cse_2k20",
+  "Email": "20b124@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5975"
+    "$oid": "65f58e88f7ea0514390c4bcc"
   },
-  "id": 33,
-  "name": "Thejas_M",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS034",
+  "Roll_No": 34,
+  "Name": "Malavika_G",
+  "Class": "cse_2k20",
+  "Email": "20b323@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5976"
+    "$oid": "65f58e88f7ea0514390c4bcd"
   },
-  "id": 34,
-  "name": "Tona_Antony",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS035",
+  "Roll_No": 35,
+  "Name": "Midhun_Mahesh",
+  "Class": "cse_2k20",
+  "Email": "20b390@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5977"
+    "$oid": "65f58e88f7ea0514390c4bce"
   },
-  "id": 35,
-  "name": "Veekshita_C_H",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS036",
+  "Roll_No": 36,
+  "Name": "Mohammed_Waseem",
+  "Class": "cse_2k20",
+  "Email": "20b471@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5978"
+    "$oid": "65f58e88f7ea0514390c4bcf"
   },
-  "id": 36,
-  "name": "Veenus",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS037",
+  "Roll_No": 37,
+  "Name": "Muhammad_Asad_V_P",
+  "Class": "cse_2k20",
+  "Email": "20b051@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac5979"
+    "$oid": "65f58e88f7ea0514390c4bd0"
   },
-  "id": 37,
-  "name": "Vyshna_S",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS038",
+  "Roll_No": 38,
+  "Name": "Muhammad_Shalim_T",
+  "Class": "cse_2k20",
+  "Email": "20b466@gmail.com"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac597a"
+    "$oid": "65f58e88f7ea0514390c4bd1"
   },
-  "id": 38,
-  "name": "Vyshnav_K",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS039",
+  "Roll_No": 39,
+  "Name": "Navneeth_S",
+  "Class": "cse_2k20",
+  "Email": "20b431@gcek.ac.in"
 },
 {
   "_id": {
-    "$oid": "65c4bca53d03d6e1f0ac597b"
+    "$oid": "65f58e88f7ea0514390c4bd2"
   },
-  "id": 39,
-  "name": "Yadhu_Krishna",
-  "class": "2k20"
+  "KTU_ID": "KNR20CS040",
+  "Roll_No": 40,
+  "Name": "Neha_Muraleedharan",
+  "Class": "cse_2k20",
+  "Email": "20b219@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bd3"
+  },
+  "KTU_ID": "KNR20CS041",
+  "Roll_No": 41,
+  "Name": "Nitheesh_Krishna_D_H",
+  "Class": "cse_2k20",
+  "Email": "20b692@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bd4"
+  },
+  "KTU_ID": "KNR20CS042",
+  "Roll_No": 42,
+  "Name": "Razeen_Mahroof",
+  "Class": "cse_2k20",
+  "Email": "20b669@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bd5"
+  },
+  "KTU_ID": "KNR20CS043",
+  "Roll_No": 43,
+  "Name": "Rishikesh_K_V",
+  "Class": "cse_2k20",
+  "Email": "20b739@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bd6"
+  },
+  "KTU_ID": "KNR20CS044",
+  "Roll_No": 44,
+  "Name": "Rishikesh_V_K",
+  "Class": "cse_2k20",
+  "Email": "20b410@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bd7"
+  },
+  "KTU_ID": "KNR20CS046",
+  "Roll_No": 46,
+  "Name": "Samanyu_B_G",
+  "Class": "cse_2k20",
+  "Email": "20b067@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bd8"
+  },
+  "KTU_ID": "KNR20CS047",
+  "Roll_No": 47,
+  "Name": "Sandeep_E_P",
+  "Class": "cse_2k20",
+  "Email": "20b331@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bd9"
+  },
+  "KTU_ID": "KNR20CS048",
+  "Roll_No": 48,
+  "Name": "Sayooj_Sathyan",
+  "Class": "cse_2k20",
+  "Email": "20b108@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bda"
+  },
+  "KTU_ID": "KNR20CS049",
+  "Roll_No": 49,
+  "Name": "Sooraj_T_V",
+  "Class": "cse_2k20",
+  "Email": "20b607@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bdb"
+  },
+  "KTU_ID": "KNR20CS050",
+  "Roll_No": 50,
+  "Name": "Swathi_Prakash",
+  "Class": "cse_2k20",
+  "Email": "20b217@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bdc"
+  },
+  "KTU_ID": "KNR20CS051",
+  "Roll_No": 51,
+  "Name": "Thejus_M_Manoj",
+  "Class": "cse_2k20",
+  "Email": "20b308@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bdd"
+  },
+  "KTU_ID": "KNR20CS052",
+  "Roll_No": 52,
+  "Name": "Tona_Antony",
+  "Class": "cse_2k20",
+  "Email": "20b597@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bde"
+  },
+  "KTU_ID": "KNR20CS053",
+  "Roll_No": 53,
+  "Name": "Veekshitha_C_H",
+  "Class": "cse_2k20",
+  "Email": "20b392@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bdf"
+  },
+  "KTU_ID": "KNR20CS054",
+  "Roll_No": 54,
+  "Name": "Veenus_K_K",
+  "Class": "cse_2k20",
+  "Email": "20b347@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be0"
+  },
+  "KTU_ID": "KNR20CS055",
+  "Roll_No": 55,
+  "Name": "Vismaya_B",
+  "Class": "cse_2k20",
+  "Email": "20b404@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be1"
+  },
+  "KTU_ID": "KNR20CS056",
+  "Roll_No": 56,
+  "Name": "Vyshna_Satheeshan_T_K",
+  "Class": "cse_2k20",
+  "Email": "20b694@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be2"
+  },
+  "KTU_ID": "KNR20CS057",
+  "Roll_No": 57,
+  "Name": "Vyshnav_K",
+  "Class": "cse_2k20",
+  "Email": "20b374@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be3"
+  },
+  "KTU_ID": "KNR20CS058",
+  "Roll_No": 58,
+  "Name": "Vyshnav_M_K",
+  "Class": "cse_2k20",
+  "Email": "20b053@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be4"
+  },
+  "KTU_ID": "KNR20CS059",
+  "Roll_No": 59,
+  "Name": "Yadhukrishna_T_K",
+  "Class": "cse_2k20",
+  "Email": "20b284@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be5"
+  },
+  "KTU_ID": "KNR20CS060",
+  "Roll_No": 60,
+  "Name": "Amrutha_Aneesh",
+  "Class": "cse_2k20",
+  "Email": "20b680@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be6"
+  },
+  "KTU_ID": "KNR20CS061",
+  "Roll_No": 61,
+  "Name": "Devika_Jagadeesh",
+  "Class": "cse_2k20",
+  "Email": "20b744@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be7"
+  },
+  "KTU_ID": "KNR20CS062",
+  "Roll_No": 62,
+  "Name": "Krishnendu_N",
+  "Class": "cse_2k20",
+  "Email": "20b401@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be8"
+  },
+  "KTU_ID": "KNR20CS063",
+  "Roll_No": 63,
+  "Name": "Melvin_Thankachan_K",
+  "Class": "cse_2k20",
+  "Email": "20b343@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4be9"
+  },
+  "KTU_ID": "KNR20CS064",
+  "Roll_No": 64,
+  "Name": "Ramnath_Shenoy_B",
+  "Class": "cse_2k20",
+  "Email": "20b743@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bea"
+  },
+  "KTU_ID": "KNR20CS065",
+  "Roll_No": 65,
+  "Name": "Athul_Benny",
+  "Class": "cse_2k20",
+  "Email": "20b228@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4beb"
+  },
+  "KTU_ID": "KNR20CS066",
+  "Roll_No": 66,
+  "Name": "Akshay_P",
+  "Class": "cse_2k20",
+  "Email": "20b371@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bec"
+  },
+  "KTU_ID": "LKNR20CS067",
+  "Roll_No": 67,
+  "Name": "Amruth_P",
+  "Class": "cse_2k20",
+  "Email": "21L578@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bed"
+  },
+  "KTU_ID": "LKNR20CS068",
+  "Roll_No": 68,
+  "Name": "Anagha_A_S",
+  "Class": "cse_2k20",
+  "Email": "21L578@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bee"
+  },
+  "KTU_ID": "LKNR20CS069",
+  "Roll_No": 69,
+  "Name": "Aromal_E_K",
+  "Class": "cse_2k20",
+  "Email": "21L587@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bef"
+  },
+  "KTU_ID": "LKNR20CS070",
+  "Roll_No": 70,
+  "Name": "Ashish_P",
+  "Class": "cse_2k20",
+  "Email": "21L576@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bf0"
+  },
+  "KTU_ID": "LKNR20CS071",
+  "Roll_No": 71,
+  "Name": "Aswathi_P_V",
+  "Class": "cse_2k20",
+  "Email": "21L574@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bf1"
+  },
+  "KTU_ID": "LKNR20CS072",
+  "Roll_No": 72,
+  "Name": "Athira_K_B",
+  "Class": "cse_2k20",
+  "Email": "21L592@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bf2"
+  },
+  "KTU_ID": "LKNR20CS073",
+  "Roll_No": 73,
+  "Name": "Muhammed_Aslam_A_R",
+  "Class": "cse_2k20",
+  "Email": "21L597@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bf3"
+  },
+  "KTU_ID": "LKNR20CS074",
+  "Roll_No": 74,
+  "Name": "Nivya_T_P",
+  "Class": "cse_2k20",
+  "Email": "21L593@gcek.ac.in"
+},
+{
+  "_id": {
+    "$oid": "65f58e88f7ea0514390c4bf4"
+  },
+  "KTU_ID": "LKNR20CS075",
+  "Roll_No": 75,
+  "Name": "Sreeraj_E_K",
+  "Class": "cse_2k20",
+  "Email": "21L559@gcek.ac.in"
 }]
