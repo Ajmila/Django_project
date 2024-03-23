@@ -78,6 +78,7 @@ class VideoProcessingViewSet(ViewSet):
             class_name = serializer.validated_data['class_name']
             period = serializer.validated_data['period']
             video_file = serializer.validated_data['video']
+            email = serializer.validated_data['email']
             temp_dir = tempfile.TemporaryDirectory()
             temp_file_path = os.path.join(temp_dir.name, 'video.mov')
 
@@ -108,35 +109,41 @@ class VideoProcessingViewSet(ViewSet):
                 
                 # remove similar frames
                 non_similar_frames = remove_similar_frames(frames)
-                print('removed similar frames')
+                print('removed similar frames',len(non_similar_frames))
                 frames[:] = non_similar_frames[:]
 
                 # remove blurred frames
-                sharp_frames = remove_blurred_frames(frames)
+                sharp_frames = remove_blurred_frames(frames, threshold = 55)
                 if sharp_frames:
-                    print('removed blurred frames')
+                    print('removed blurred frames',len(sharp_frames))
                 
                 # detect faces from frames
                 detected_faces = detect_faces_retinaface(sharp_frames)
                 if len(detected_faces):
-                    print('detected faces successfully')
+                    print('detected faces successfully',len(detected_faces))
                     
-                # remove small faces
-                    # write code..
+                
+                
                 # remove similar faces from detected_faces
                 non_similar_faces = remove_similar_faces(detected_faces)
-                detected_faces[:] = non_similar_faces[:]
-                if len(detected_faces):
-                    print('removed similar faces successfully')
                 
+                if len(non_similar_faces):
+                    print('removed similar faces successfully',len(non_similar_faces))
+                
+                # remove small faces
+                big_faces = remove_small_faces(non_similar_faces,sharp_frames)  
                 # remove blurred faces
-                sharp_faces = remove_blurred_faces(detected_faces)
+                sharp_faces = remove_blurred_faces(big_faces,threshold = 27)
                 if sharp_faces:
                     print('removed blurred faces successfully')
-                    detected_faces[:] = sharp_faces[:]
-
+                    print(len(sharp_faces))
+                output_folder = 'C:\\Users\\wigar\\Desktop\\Django_project\\sharpfaces'
+    
+                for i, face in enumerate(sharp_faces):
+                    face = cv2.cvtColor(face,cv2.COLOR_BGR2RGB)
+                    cv2.imwrite(os.path.join(output_folder, f'face_{i}.jpg'), face)
                 #recognize faces and find present students
-                present = recognize_faces(detected_faces,class_name)
+                present = recognize_faces(sharp_faces,class_name)
                 if len(present):
                     print('recognized faces successfully')
                     print('present:',present)
@@ -158,10 +165,11 @@ class VideoProcessingViewSet(ViewSet):
                 print('csv file generated')
 
                 # send mail to absent students(note:do not run this function since database dont have full data)
-                #send_mail_to_absent_students(absent_students) 
+                send_mail_to_absent_students(absent_students) 
 
                 # mail csv file to teacher
-                email = request.session.get('email')
+                #email = request.session.get('email')
+                print(email)
                 send_csv_email(email,csv_data)
 
             finally:

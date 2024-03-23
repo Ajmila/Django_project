@@ -37,12 +37,12 @@ def calculate_blurriness(frame):
     gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
     return cv2.Laplacian(gray, cv2.CV_64F).var()
 
-def remove_blurred_frames(frames, threshold=60):
+def remove_blurred_frames(frames, threshold = 55):
     sharp_frames = []
     count=0
     for i, frame in enumerate(frames):
         sharpness = calculate_blurriness(frame)
-        print("frame",count," ",sharpness)
+        #print("frame",count," ",sharpness)
         count+=1
         if sharpness > threshold:
             sharp_frames.append(frame)
@@ -108,11 +108,11 @@ def detect_faces_retinaface(frames):
                 extracted_face=frame[y1:y2,x1:x2]
                 extracted_face=cv2.cvtColor(extracted_face,cv2.COLOR_BGR2RGB)
                 detected_faces.append(extracted_face)
-    output_folder = 'C:\\Users\\wigar\\Desktop\\Django_project\\faces'
+    # output_folder = 'C:\\Users\\wigar\\Desktop\\Django_project\\faces'
     
-    for i, face in enumerate(detected_faces):
-        face = cv2.cvtColor(face,cv2.COLOR_BGR2RGB)
-        cv2.imwrite(os.path.join(output_folder, f'face_{i}.jpg'), face)
+    # for i, face in enumerate(detected_faces):
+    #     face = cv2.cvtColor(face,cv2.COLOR_BGR2RGB)
+    #     cv2.imwrite(os.path.join(output_folder, f'face_{i}.jpg'), face)
 
     return detected_faces
 
@@ -121,13 +121,13 @@ def detect_faces_retinaface(frames):
 # functions to process detected faces
 
 # function to remove small faces from detected faces
-     # note:need to find appropriate threshold
+     
 def remove_small_faces(detected_faces,frames):
     large_faces = []
     frame_area = frames[0].shape[0] * frames[0].shape[1]
 
     # Set the threshold as a percentage of the frame area
-    threshold_percentage = 0.001 # Adjust this percentage according to your requirements
+    threshold_percentage = 0.01 # Adjust this percentage according to your requirements
     min_area_threshold = int(threshold_percentage * frame_area)
 
     for face in detected_faces:
@@ -137,7 +137,7 @@ def remove_small_faces(detected_faces,frames):
         # Check if the area is greater than the minimum threshold
         if area >= min_area_threshold:
             large_faces.append(face)
-
+    return large_faces
 # function to remove similar faces from detected faces
 def remove_similar_faces(detected_faces):
     non_similar_faces = []
@@ -152,7 +152,7 @@ def remove_similar_faces(detected_faces):
         if descriptors2 is None:
             continue
         matches = bf.match(descriptors1, descriptors2)
-        if len(matches) < 200:
+        if len(matches) < 60:
             non_similar_faces.append(detected_faces[i])
     return non_similar_faces
 
@@ -161,7 +161,7 @@ def calculate_blurriness(face):
     gray = cv2.cvtColor(face, cv2.COLOR_RGB2GRAY)
     return cv2.Laplacian(gray, cv2.CV_64F).var()
 
-def remove_blurred_faces(detected_faces, threshold=40):
+def remove_blurred_faces(detected_faces, threshold = 27):
     sharp_faces = []
     count=0
     for i, face in enumerate(detected_faces):
@@ -210,13 +210,13 @@ def recognize_faces(detected_faces,class_name):
         models = []
         
         for i in range(len(detected_faces)):
-            model = df.find(img_path = detected_faces[i],db_path = temp_folder,model_name = 'Facenet',distance_metric='euclidean',enforce_detection = False,normalization = 'Facenet',detector_backend ='mediapipe')
+            model = df.find(img_path = detected_faces[i],db_path = temp_folder,model_name = 'Facenet',distance_metric='cosine',enforce_detection = False,normalization = 'Facenet',detector_backend ='mediapipe')
             models.append(model)
         print()
         #count = 0
         for model in models:
             if len(model) > 0 and len(model[0]) > 0:
-                name = model[0]['identity'].values[0]#.split('\\')[-1].split('/')[-1].split('.')[-2]
+                name = model[0]['identity'].values[0].split('/')[-1][:-6]
                 #print(count , "_ ", name)
                 if name not in present:
                     present.append(name)
@@ -238,15 +238,23 @@ def get_absent_students(present):
     return absent_students
 
 def generate_csv(document):
-    csv_data = [[ 'Date', 'Time', 'Class','Period','Present Students', 'Absent Students'],
-                [document['date'], document['time'],document['class'],document['period'], '','']]
-    
-    for student in document.get('present', []):
-        csv_data.append(['', '', '', '', student, ''])
+    csv_data = [['Date', 'Time', 'Class', 'Period', 'Present Students', 'Absent Students'],
+                [document['date'], document['time'], document['class'], document['period'], '', '']]
 
-    # Add absent students to CSV data
-    for student in document.get('absent', []):
-        csv_data.append(['', '', '', '','', student])
+    present_students = document.get('present', [])
+    absent_students = document.get('absent', [])
+
+    # Determine the maximum number of students (present or absent) to determine the number of rows needed
+    max_students = max(len(present_students), len(absent_students))
+
+    # Add present and absent students to CSV data
+    for i in range(max_students):
+        row = ['', '', '', '', '', '']
+        if i < len(present_students):
+            row[4] = present_students[i]  # Fill 'Present Students' column
+        if i < len(absent_students):
+            row[5] = absent_students[i]   # Fill 'Absent Students' column
+        csv_data.append(row)
 
     # Convert CSV data to string
     csv_buffer = StringIO()
@@ -261,7 +269,7 @@ def generate_csv(document):
 
 def send_mail_to_absent_students(absent_students):
     
-    absent_students = [{'email':'ajmilashada@gmail.com','name':'Ajmila_Shada'}]
+    absent_students = [{'email':'ajmilashada@gmail.com','name':'Ajmila_Shada'},{'email':'Shalimshali46@gmail.com','name':'Muhammad Shalim T'}]
     for student_data in absent_students:
         email = student_data['email']  # Assuming 'email' is the field in the data that stores email addresses
         name = student_data['name']  # Assuming 'name' is the field in the data that stores student names
@@ -277,7 +285,7 @@ def send_mail_to_absent_students(absent_students):
 def send_csv_email(email, csv_data):
     subject = 'CSV File Attachment'
     message = 'Please find the attached CSV file.'
-
+    #email = 'ajmilashada@gmail.com'
     # Create a CSV attachment
     attachment_filename = 'attendance.csv'
     

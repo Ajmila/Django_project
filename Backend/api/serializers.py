@@ -26,6 +26,7 @@ class VideoUploadSerializer(serializers.Serializer):
     class_name = serializers.CharField()
     period = serializers.CharField()
     video = serializers.FileField()
+    email = serializers.CharField()
 
 
 
